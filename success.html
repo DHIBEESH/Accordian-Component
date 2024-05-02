@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('aa.webp'); 
+            background-size: cover;
+            background-position: center;
+            color: #ffffff; 
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .success-container {
+            background-color: rgba(0, 0, 0, 0.7); 
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div id="success" class="success-container">
+        <h1>Success!</h1>
+        <p>Your login was completed successfully.</p>
+        <script>
+            function getQueryVariable(variable) {
+                var query = window.location.search.substring(1);
+                var vars = query.split("&");
+                for (var i = 0; i < vars.length; i++) {
+                    var pair = vars[i].split("=");
+                    if (pair[0] === variable) {
+                        return pair[1];
+                    }
+                }
+                return false;
+            }
+            var id = getQueryVariable("id");
+            var uname = getQueryVariable("uname");
+            var branch = getQueryVariable("branch");
+            var pass = getQueryVariable("pass");
+            if (id && uname && branch && pass) {
+                document.getElementById("success").innerHTML += `
+                    <p><strong>Login id:</strong> ${id}</p>
+                    <p><strong>User name:</strong> ${uname}</p>
+                    <p><strong>Place:</strong> ${branch}</p>
+                    <p><strong>OTP:</strong> ${pass}</p>
+                `;
+            }
+        </script>
+    </div>
+</body>
+</html>

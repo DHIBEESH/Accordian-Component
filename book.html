@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Theatre</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('https://thumbs.dreamstime.com/b/pani-puri-indian-street-food-golgappe-chat-item-india-125694078.jpg') center/cover no-repeat;
+            color: #fff;
+        }
+
+        .form-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 form-container">
+                <h2 class="text-center">Order your Snacks and Beverages</h2>
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="screen">Screen:</label>
+                        <select class="form-control" id="screen" required>
+                            <option value="Screen 1">Screen 1</option>
+                            <option value="Screen 2">Screen 2</option>
+                            <option value="Screen 3">Screen 3</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="seatType">Seat Type:</label>
+                        <select class="form-control" id="seatType" required>
+                            <option value="Select">Select</option>
+                            <option value="Platinum">Platinum</option>
+                            <option value="Gold">Gold</option>
+                            <option value="Silver">Silver</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="seatNo">Seat No:</label>
+                        <input type="text" class="form-control" id="seatNo" placeholder="Enter seat number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="snackType">Snack Type:</label>
+                        <select class="form-control" id="snackType" required>
+                            <option value="Select">Select</option>
+                            <option value="Puffs">Puffs</option>
+                            <option value="Chicken Roll">Chicken Roll</option>
+                            <option value="Samosa">Samosa</option>
+                            <option value="Popcorn">Popcorn</option>
+                            <option value="Ice Cream">Ice Cream</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Snack Quantity:</label>
+                        <input type="number" class="form-control" id="quantity" placeholder="Enter snack quantity" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="juiceType">Juice Type:</label>
+                        <select class="form-control" id="juiceType" required>
+                            <option value="Select">Select</option>
+                            <option value="Coca Cola">Coca Cola</option>
+                            <option value="Pepsi">Pepsi</option>
+                            <option value="Panner Soda">Panner Soda</option>
+                            <option value="Mountain Dew">Mountain Dew</option>
+                            <option value="Sprite">Sprite</option>
+                            <option value="7UP">7UP</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="juiceQuantity">Juice Quantity:</label>
+                        <input type="number" class="form-control" id="juiceQuantity" placeholder="Enter juice quantity" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Order</button>
+                </form>
+                <div id="response" class="mt-3"></div>
+            </div>
+        </div>
+    </div>
+    <script src="snack.js"></script>
+</body>
+
+
+</html>

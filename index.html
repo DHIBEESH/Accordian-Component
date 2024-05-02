@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Street</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/c26cd2166c.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <script>
+    $(document).ready(function () {
+      $('#loginButton').click(function () {
+        alert('Login us');
+      });
+    
+ 
+      $('.card').hover(
+        function () {
+          $(this).find('img').css({
+            'transform': 'scale(1.1)',
+            'transition': 'transform 0.3s ease'
+          });
+          $(this).css('box-shadow', '0 0 20px rgba(0, 0, 0, 0.3)');
+        },
+        function () {
+          $(this).find('img').css('transform', 'scale(1)');
+          $(this).css('box-shadow', 'none');
+        }
+      );
+    });
+  </script>
+   <script>
+   $(document).ready(function () {
+      $('#showOffersButton').on('click', function () {
+        $(this).animate({
+          opacity: 0.5,
+          marginright: '50px' 
+        }, 500, function () {
+          $('#offersContainer').slideDown();
+        });
+      });
+    });
+  </script>
+  <style>
+    #offersContainer {
+      display: none;
+      
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
+  <a class="navbar-brand" href="#" id="brand">Movie Street</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav" >
+    <ul class="navbar-nav ml-auto" >
+      <li class="nav-item active">
+        <a class="nav-link" href="#" id="navbarNav">Movies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="movie.html"id="navbarNav">Grabtickets </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="book.html"id="navbarNav">Snack booking</a>
+      </li>
+      <li class="nav-item">
+        <button class="btnn">
+          <a class="nav-link" href="#"id="navbarNav">Login</a>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero-section" id="nav">
+  <h1>Welcome to Movie Street</h1>
+  <p>Enjoy the movies streaming in movie street</p>
+  <!-- <a href="#" id="loginButton" class="btn btn-primary">Shop Now</a> -->
+  <button id="loginButton" class="btn btn-primary">WATCH OUT</button>
+</div>
+
+<div class="container featured-products">
+  <h2>Top-Rated Movies</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="index_img/shawshank.jpg " class="card-img-top" alt="Product 1">
+        <div class="card-body">
+          <h5 class="card-title">Shawshank Redemption</h5>
+          <p class="card-text">1994 Movie.</p>
+          <a href="#" class="btn btn-primary">Watch out</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+          <img src="index_img/godfather.jpg" class="card-img-top" alt="Product 2" height="315px" width="150px">
+          <div class="card-body">
+            <h5 class="card-title">GodFather</h5>
+            <p class="card-text">1969 Movie</p>
+            <a href="#" class="btn btn-primary">Watch out</a>
+          </div>
+        </div>
+      </div>    
+    <div class="col-md-4">
+      <div class="card">
+        <img src="index_img/darkknight.jpg" class="card-img-top" alt="Product 3"height="315px">
+        <div class="card-body">
+          <h5 class="card-title">DarkKnight</h5>
+          <p class="card-text">2008 Movie</p>
+          <a href="#" class="btn btn-primary">Watch out</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br>
+
+<button id="flip" class="b1"  >Upcoming movies</button>
+
+<div id="panel" class="container mt-4">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <img src="index_img/paruthi.jpg" class="card-img-top" alt="Product 2"height="405px">
+        <div class="card-body">
+          <h5 class="card-title">Paruthiveeran</h5>
+          <p class="card-text">Tamil Movie</p>
+          <a href="#" class="btn btn-primary">Watch out</a>
+        </div>
+      </div>
+    </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="index_img/vada.avif" class="card-img-top" alt="Product 1">
+          <div class="card-body">
+            <h5 class="card-title">Vada Chennai</h5>
+            <p class="card-text">Tamil Movie</p>
+            <a href="#" class="btn btn-primary">Watch out</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="index_img/ayirathil oruvan.webp" class="card-img-top" alt="Product 1" height="405px">
+          <div class="card-body">
+            <h5 class="card-title">Ayirathil Oruvan</h5>
+            <p class="card-text">Tamil Movie</p>
+            <a href="#" class="btn btn-primary">Watch out</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="index_img/vinnai.jpg" class="card-img-top" alt="Product 1"height="405px">
+          <div class="card-body">
+            <h5 class="card-title">Vinnaithaandi Varuvaaya</h5>
+            <p class="card-text">Lovable Movie</p>
+            <a href="#" class="btn btn-primary">Watch out</a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script> 
+  $(document).ready(function(){
+    $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+  });
+  </script>
+</body>
+</html>

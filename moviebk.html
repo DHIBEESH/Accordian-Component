@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Tickets Booking</title>
+    <script src="script.js"></script> <!-- Include your TypeScript file here -->
+
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        .movie-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .movie-list li {
+            margin-bottom: 10px;
+        }
+        .movie-details {
+            display: none;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .movie-list li input[type="radio"]:checked + label + .movie-details {
+            display: block;
+        }
+        .movie-list li label {
+            display: block;
+            padding: 10px;
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        .movie-list li label:hover {
+            background-color: #f9f9f9;
+        }
+        .booking-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+        .booking-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .booking-form input[type="text"],
+        .booking-form input[type="email"],
+        .booking-form input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .booking-form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .booking-form button:hover {
+            background-color: #444;
+        }
+        /* Additional CSS for display page */
+        .display-page {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .display-page h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Movie Tickets Booking</h1>
+    </header>
+    <main>
+        <h2>Select a Movie</h2>
+        <ul class="movie-list">
+            <li>
+                <input type="radio" id="movie1" name="movie" />
+                <label for="movie1">Movie 1 - Screen 1 (10:00 AM)</label>
+                <div class="movie-details">
+                    <p>Details for Movie 1 : Ghilli.</p>
+                    <p> 2004 Re released Movie.</p>
+                    <div class="booking-form">
+                        <form id="form1">
+                            <img src="movie_img/gill.jpg" height="200px" width="200px">
+                            <label for="name1">Name:</label>
+                            <input type="text" id="name1" name="name" required>
+                            <label for="email1">Email:</label>
+                            <input type="email" id="email1" name="email" required>
+                            <label for="tickets1">Number of Tickets:</label>
+                            <input type="number" id="tickets1" name="tickets" min="1" required>
+                            <button id="bookNow1" type="submit">Book Now</button>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="radio" id="movie2" name="movie" />
+                <label for="movie2">Movie 2 - Screen 2 (2:00 PM)</label>
+                <div class="movie-details">
+                    <p>Details for Movie 2 : Aavesham.</p>
+                    <p>2024 Movie.</p>
+                    <div class="booking-form">
+                        <form id="form2">
+                            <img src="movie_img/aavesham.avif" height="200px" width="200px">
+                            <label for="name2">Name:</label>
+                            <input type="text" id="name2" name="name" required>
+                            <label for="email2">Email:</label>
+                            <input type="email" id="email2" name="email" required>
+                            <label for="tickets2">Number of Tickets:</label>
+                            <input type="number" id="tickets2" name="tickets" min="1" required>
+                            <button id="bookNow2" type="submit">Book Now</button>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="radio" id="movie3" name="movie" />
+                <label for="movie3">Movie 3 - Screen 3 (6:00 PM)</label>
+                <div class="movie-details">
+                    <p>Details for Movie 3 : Godzilla Vs Kong.</p>
+                    <p>2024 Movie.</p>
+                    <div class="booking-form">
+                        <form id="form3">
+                            <img src="movie_img/gozilla.jpg" height="200px" width="200px">
+                            <label for="name3">Name:</label>
+                            <input type="text" id="name3" name="name" required>
+                            <label for="email3">Email:</label>
+                            <input type="email" id="email3" name="email" required>
+                            <label for="tickets3">Number of Tickets:</label>
+                            <input type="number" id="tickets3" name="tickets" min="1" required>
+                            <button id="bookNow3" type="submit">Book Now</button>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <!-- Add more movies as needed -->
+        </ul>
+        <!-- Display page -->
+        <div class="display-page" id="displayPage">
+            <h2>Booking Details</h2>
+            <div id="bookingDetails"></div>
+        </div>
+    </main>
+    
+    </body>
+</html>

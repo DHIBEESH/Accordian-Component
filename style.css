@@ -1,0 +1,68 @@
+.hero-section {
+    background: #f8f9fa;
+    padding: 100px 0;
+    text-align: center;
+    padding-right: 800px;
+    height: 55vh;
+
+  }
+
+  .featured-products {
+    padding: 50px 0;
+  }
+  #nav{
+      background-image: url('index_img/bg.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 70%;
+      color: white;
+      background-color: white;
+   
+     
+  }
+  #navbarNav{
+    color: white;
+  }
+  #brand{
+      font-family:monospace;
+      font-size: xx-large;
+      color: white;
+  }
+
+  .card {
+    overflow: hidden; /* Ensure the overflow is hidden for the zoom effect */
+  }
+
+  .card img {
+    transition: transform 0.3s ease; /* Add a smooth transition to the image */
+  }
+
+  .card:hover img {
+    transform: scale(1.1); /* Zoom in on hover */
+  }
+
+  .card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
+  }
+
+ 
+ .b1{
+  margin-left: 300px;
+  width: 50%;
+  font-size: x-large;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  color: white;
+  background-color: #757576;
+  border-radius: 30px;
+ }
+
+
+ .btnn{
+  background-color: #757576;
+  border: solid;
+  border-radius: 5px;
+  border-color: #fbf8f8;
+  height: 40px;
+  color: rgb(165, 21, 21);
+ }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Details</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Booking Details</h2>
+    <div id="bookingDetails"></div>
+
+    <script>
+        // Retrieve URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const movieIndex = params.get('movieIndex');
+        
+        // Retrieve booking details
+        const bookingDetails = document.getElementById('bookingDetails');
+        if (bookingDetails) {
+            bookingDetails.innerHTML = `
+                <p><strong>Movie Index:</strong> ${movieIndex}</p>
+            `;
+            
+            // Retrieve other parameters
+            params.forEach((value, key) => {
+                if (key !== 'movieIndex') {
+                    bookingDetails.innerHTML += `<p><strong>${key}:</strong> ${value}</p>`;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

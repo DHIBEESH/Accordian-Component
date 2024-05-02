@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie List</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  h1 {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .movie-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+  }
+  
+  .movie-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .rating {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .votes {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .screen-info {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .btn-book {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .btn-book:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-return {
+    width: 100%;
+    margin: 20px auto;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .btn-return:hover {
+    background-color: #218838;
+  }
+  .img{
+    height: 140px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Movies</h1>
+  
+  <div class="movie-card">
+    <div class="screen-info">Screen 1</div>
+    <img src="movie_img/gili.jpg" alt="Movie 1">
+    <div class="movie-title">Ghilli</div>
+    <div class="rating">Rating: 8.5</div>
+    <div class="votes">Votes: 1200k Votes</div>
+    <button class="btn-book">Book Now</button>
+  </div>
+  
+  <div class="movie-card">
+    <div class="screen-info">Screen 2</div>
+    <img src="movie_img/fafa.jpg" alt="Movie 2">
+    <div class="movie-title">Aavesham</div>
+    <div class="rating">Rating: 7.9</div>
+    <div class="votes">Votes: 850k Votes</div>
+    <button class="btn-book">Book Now</button>
+  </div>
+  
+  <div class="movie-card">
+    <div class="screen-info">Screen 3</div>
+    <img src="movie_img/gozilla.jpg"height="80px" alt="Movie 3">
+    <div class="movie-title">Godzilla</div>
+    <div class="rating">Rating: 6.8/10</div>
+    <div class="votes">Votes: 1450k Votes</div>
+    <button class="btn-book">Book Now</button>
+  </div>
+  
+  <button class="btn-return" onclick="window.location.href='index.html'">Return to Home</button>
+</div>
+
+</body>
+</html>
